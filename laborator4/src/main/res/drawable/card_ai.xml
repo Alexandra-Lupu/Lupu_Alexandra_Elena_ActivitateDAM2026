@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NOU (punctul 5): fundal alb cu colturi rotunjite, folosit pentru "cardurile" din formularul AI -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/card_ai" />
+    <corners android:radius="12dp" />
+</shape>

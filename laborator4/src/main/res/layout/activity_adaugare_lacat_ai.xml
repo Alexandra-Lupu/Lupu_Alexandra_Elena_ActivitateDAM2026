@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- punctul 5: acelasi formular ca activity_adaugare_lacat.xml, dar cu design facut cu AI.
+     Controalele si id-urile sunt ACELEASI, ca sa mearga acelasi cod Java.
+     ScrollView = ecranul se poate derula daca formularul nu incape pe ecran. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundal_ai"
+    tools:context=".AdaugareLacatAIActivity">
+
+    <!-- ScrollView accepta un singur copil, deci punem totul intr-un LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!--Titlu-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Adauga un lacat nou"
+            android:textColor="@color/text_ai"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!--Marca-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/card_ai"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marca:"
+                android:textColor="@color/primar_ai"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/marca_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/introduceti_marca"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <!--Culoare-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/card_ai"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Culoare:"
+                android:textColor="@color/primar_ai"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/culoare_SP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/culori" />
+        </LinearLayout>
+
+        <!--Pret-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/card_ai"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pret:"
+                android:textColor="@color/primar_ai"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/pret_ET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/introduceti_pret"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!--Tip-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/card_ai"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipul lacatului:"
+                android:textColor="@color/primar_ai"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/tip_RG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/clasic_RB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:checked="true"
+                    android:text="Clasic" />
+
+                <RadioButton
+                    android:id="@+id/bicicleta_RB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bicicleta" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <!--RezistentApa si Cifru-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/card_ai"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Caracteristici:"
+                android:textColor="@color/primar_ai"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/rezistentApa_CB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rezistent la apa" />
+
+            <Switch
+                android:id="@+id/cuCifru_SW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lacatul are cifru" />
+        </LinearLayout>
+
+        <!--NivelSiguranta-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/card_ai"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nivel de siguranta:"
+                android:textColor="@color/primar_ai"
+                android:textStyle="bold" />
+
+            <RatingBar
+                android:id="@+id/nivelSiguranta_RB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:numStars="5"
+                android:stepSize="1" />
+        </LinearLayout>
+
+        <!--Salvare-->
+        <Button
+            android:id="@+id/salveaza_BTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/primar_ai"
+            android:text="Salveaza"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>

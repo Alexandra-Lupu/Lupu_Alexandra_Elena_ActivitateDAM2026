@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">laborator 4</string>
+    <string name="introduceti_numele">introduceti_numele</string>
+    <string name="esti_student">esti_student\n</string>
+    <string name="apasa">apasa\n</string>
+    <string name="introduceti_marca">Introduceți marca</string>
+    <string name="introduceti_culoarea">introduceti_culoarea</string>
+    <string name="introduceti_pret">introduceti_pret\n</string>
+    <string-array name="culori">
+        <item>Negru</item>
+        <item>Argintiu</item>
+        <item>Auriu</item>
+    </string-array>
+</resources>

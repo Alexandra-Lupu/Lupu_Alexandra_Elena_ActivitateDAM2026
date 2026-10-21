@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <EditText
+        android:id="@+id/nume_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/introduceti_numele"
+        android:inputType="text" />
+
+    <CheckBox
+        android:id="@+id/eStudent_CB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/esti_student" />
+
+    <Button
+        android:id="@+id/btn_apasa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="extrage_informatii"
+        android:text="@string/apasa" />
+
+    <Button
+        android:id="@+id/adauga_BTN"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Adauga Lacat" />
+
+    <!-- NOU (punctul 5): deschide formularul cu design facut cu AI -->
+    <Button
+        android:id="@+id/adaugaAI_BTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adauga Lacat (AI)" />
+
+</LinearLayout>

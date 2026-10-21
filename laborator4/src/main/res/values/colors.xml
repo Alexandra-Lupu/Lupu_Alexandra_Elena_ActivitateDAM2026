@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- NOU: culori folosite in designul facut cu AI (activity_adaugare_lacat_ai.xml) -->
+    <color name="fundal_ai">#F3F1F8</color>
+    <color name="card_ai">#FFFFFFFF</color>
+    <color name="primar_ai">#4A3F8C</color>
+    <color name="text_ai">#2B2B2B</color>
+</resources>

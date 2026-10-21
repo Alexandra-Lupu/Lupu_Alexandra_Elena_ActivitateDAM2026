@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdaugareLacatActivity"
+    android:orientation="vertical">
+
+<!--Marca-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marca:" />
+
+    <EditText
+        android:id="@+id/marca_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/introduceti_marca"
+        android:inputType="text" />
+
+<!--Culoare-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Culoare:" />
+
+    <Spinner
+        android:id="@+id/culoare_SP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/culori" />
+
+<!--Pret-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pret:" />
+
+    <EditText
+        android:id="@+id/pret_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/introduceti_pret"
+        android:inputType="number" />
+
+<!--RezistentApa-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Este lacatul rezistent la apa?:" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rezistentApa_CB"/>
+
+<!--Tip-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipul lacatului este: "/>
+
+    <RadioGroup
+        android:id="@+id/tip_RG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/clasic_RB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clasic"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/bicicleta_RB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bicicleta" />
+
+    </RadioGroup>
+
+    <!--Cifru-->
+    <Switch
+        android:id="@+id/cuCifru_SW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lacatul are cifru?" />
+
+    <!--NivelSiguranta-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nivel de siguranta:" />
+
+    <RatingBar
+        android:id="@+id/nivelSiguranta_RB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <!--Salvare - butonul care creeaza lacatul si il trimite inapoi-->
+    <Button
+        android:id="@+id/salveaza_BTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salveaza" />
+
+</LinearLayout>
