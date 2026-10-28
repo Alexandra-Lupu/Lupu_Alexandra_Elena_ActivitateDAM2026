@@ -50,7 +50,7 @@ public class AdaugareLacatActivity extends AppCompatActivity {
             // cream obiectul cu constructorul clasei Lacat
             Lacat lacat = new Lacat(marca, culoare, rezistentApa, tip, pret, cuCifru, nivelSiguranta);
 
-            // punem obiectul in Bundle (cheia "lacat"), iar Bundle-ul in Intent
+            // punem obiectul in Bundle (cheia "lacat"), iar Bundle-ul in Intent ca sa-l returnam la prima activitate
             Bundle bundle = new Bundle();
             bundle.putSerializable("lacat", lacat);
             Intent intent = new Intent();

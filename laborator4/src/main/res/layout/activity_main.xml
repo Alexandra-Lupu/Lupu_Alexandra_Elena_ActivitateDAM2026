@@ -38,11 +38,18 @@
         android:layout_height="90dp"
         android:text="Adauga Lacat" />
 
-    <!-- NOU (punctul 5): deschide formularul cu design facut cu AI -->
+    <!-- (punctul 5): deschide formularul cu design facut cu AI -->
     <Button
         android:id="@+id/adaugaAI_BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Adauga Lacat (AI)" />
+
+    <!--  Afisare lista   -->
+    <Button
+        android:id="@+id/button_afisare_lista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Afisare lista" />
 
 </LinearLayout>
