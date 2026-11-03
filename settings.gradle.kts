@@ -26,3 +26,4 @@ rootProject.name = "Lupu_Alexandra_Elena_ActivitateDAM2026"
 include(":app")
 include(":laborator2")
 include(":laborator4")
+include(":pregatiretest1")
