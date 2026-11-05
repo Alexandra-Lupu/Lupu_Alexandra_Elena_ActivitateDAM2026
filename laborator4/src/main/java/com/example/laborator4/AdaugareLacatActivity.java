@@ -25,6 +25,39 @@ public class AdaugareLacatActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_adaugare_lacat);
 
+        if (getIntent().hasExtra("lacat")) {
+            Lacat lacat = getIntent().getParcelableExtra("lacat");
+
+            EditText marcaEt = findViewById(R.id.marca_ET);
+            Spinner culoareSp = findViewById(R.id.culoare_SP);
+            EditText pretEt = findViewById(R.id.pret_ET);
+            CheckBox rezistentApaCb = findViewById(R.id.rezistentApa_CB);
+            RadioButton clasicRb = findViewById(R.id.clasic_RB);
+            RadioButton bicicletaRb = findViewById(R.id.bicicleta_RB);
+            Switch cuCifruSw = findViewById(R.id.cuCifru_SW);
+            RatingBar nivelSigurantaRb = findViewById(R.id.nivelSiguranta_RB);
+
+            marcaEt.setText(lacat.getMarca());
+            pretEt.setText(String.valueOf(lacat.getPret()));
+            rezistentApaCb.setChecked(lacat.isRezistentApa());
+            cuCifruSw.setChecked(lacat.isCuCifru());
+            nivelSigurantaRb.setRating(lacat.getNivelSiguranta());
+
+            // RadioButton: bifam butonul care are tipul lacatului
+            if (lacat.getTip().equals("Clasic")) {
+                clasicRb.setChecked(true);
+            } else {
+                bicicletaRb.setChecked(true);
+            }
+
+            // Spinner: cautam pozitia culorii si o selectam
+            for (int i = 0; i < culoareSp.getCount(); i++) {
+                if (culoareSp.getItemAtPosition(i).toString().equals(lacat.getCuloare())) {
+                    culoareSp.setSelection(i);
+                }
+            }
+        }
+
         // gasim butonul Salveaza din XML dupa id
         Button salveazaBtn = findViewById(R.id.salveaza_BTN);
         salveazaBtn.setOnClickListener(v -> {
@@ -52,7 +85,8 @@ public class AdaugareLacatActivity extends AppCompatActivity {
 
             // punem obiectul in Bundle (cheia "lacat"), iar Bundle-ul in Intent ca sa-l returnam la prima activitate
             Bundle bundle = new Bundle();
-            bundle.putSerializable("lacat", lacat);
+            //bundle.putSerializable("lacat", lacat);      //lab5
+            bundle.putParcelable("lacat", lacat);
             Intent intent = new Intent();
             intent.putExtras(bundle);
 

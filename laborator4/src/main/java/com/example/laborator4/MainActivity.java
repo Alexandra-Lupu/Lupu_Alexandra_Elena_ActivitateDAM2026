@@ -64,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
 
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("lista", listaLacate);
+                //bundle.putSerializable("lista", listaLacate);  lab5
+                bundle.putParcelableArrayList("lista", listaLacate);     //lab6
                 intent.putExtras(bundle);
 
                 startActivity(intent);
@@ -79,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
         // verificam: raspunsul e de la formular
             if (requestCode == 200 && resultCode == RESULT_OK && data != null) {
                 Bundle bundle = data.getExtras();
-                Lacat lacat = (Lacat) bundle.getSerializable("lacat");
+                //Lacat lacat = (Lacat) bundle.getSerializable("lacat");
+                Lacat lacat = bundle.getParcelable("lacat");  //lab6
 
                 // adaugam lacatul primit in lista
                 listaLacate.add(lacat);

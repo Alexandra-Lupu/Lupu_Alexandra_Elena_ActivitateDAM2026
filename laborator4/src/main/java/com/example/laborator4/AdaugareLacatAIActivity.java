@@ -55,7 +55,8 @@ public class AdaugareLacatAIActivity extends AppCompatActivity {
 
             // punem obiectul in Bundle (cheia "lacat"), iar Bundle-ul in Intent
             Bundle bundle = new Bundle();
-            bundle.putSerializable("lacat", lacat);
+            //bundle.putSerializable("lacat", lacat);     lab5
+            bundle.putParcelable("lacat", lacat);   //lab6
             Intent intent = new Intent();
             intent.putExtras(bundle);
 
