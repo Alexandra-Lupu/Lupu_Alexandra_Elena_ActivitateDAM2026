@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AdaugaLaptop_Form">
+
+
+    <TextView
+        android:id="@+id/tv_marca_laptop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Marca laptop" />
+
+    <EditText
+        android:id="@+id/et_marca_laptop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Marca.."
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tv_pret_laptop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pret laptop" />
+
+    <EditText
+        android:id="@+id/et_pret_laptop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Pret.."
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tv_nr_nuclee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Numar nuclee" />
+
+    <EditText
+        android:id="@+id/et_nr_nuclee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nr nuclee.."
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tv_touchscreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Touchscreen" />
+
+    <Switch
+        android:id="@+id/switch_touchscreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nu/Da" />
+
+    <Button
+        android:id="@+id/btn_trimite_laptop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trimite" />
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Formular">
+
+    <!-- aici vin CheckBox, RadioGroup, Spinner, RatingBar, Switch, Button -->
+
+    <CheckBox
+        android:id="@+id/cB_accept_termenii"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accept termenii" />
+
+    <RadioGroup
+        android:id="@+id/rG_grup"
+        android:layout_width="match_parent"
+        android:layout_height="179dp">
+
+        <EditText
+            android:id="@+id/eT_numeRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Ati citit regulamentul?" />
+
+        <RadioButton
+            android:id="@+id/rB1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="da" />
+
+        <RadioButton
+            android:id="@+id/rB2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nu" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tV_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Culoare" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/culori" />
+
+    <TextView
+        android:id="@+id/tV_stele"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cum ne apreciati serviciile?" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_servicii"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5" />
+
+    <TextView
+        android:id="@+id/tV_ne_recomandati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ne recomandati?" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Da/Nu" />
+
+    <Button
+        android:id="@+id/btn_trimiteForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trimite" />
+
+    <TextView
+        android:id="@+id/tv_rezultat_form"
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        android:text="Afisare formular..." />
+
+</LinearLayout>

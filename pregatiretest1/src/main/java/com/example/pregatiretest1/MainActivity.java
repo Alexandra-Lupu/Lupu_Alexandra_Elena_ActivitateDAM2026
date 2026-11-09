@@ -1,5 +1,6 @@
 package com.example.pregatiretest1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -8,12 +9,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+    private ArrayList<Laptop> listaLaptopuri = new ArrayList<>();
+    private ActivityResultLauncher<Intent> launcher;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +73,26 @@ public class MainActivity extends AppCompatActivity {
             rezultat.setText("Rezultat: " + rez);
         });
         // ////////////
+
+        TextView tv=findViewById(R.id.tv_afisare_nrlaptop);
+        Button btn2=findViewById(R.id.btn_adaugalaptop);
+
+        launcher=registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result->{
+                    if(result.getResultCode()==RESULT_OK)
+                    {
+                        Laptop laptop =(Laptop) result .getData().getSerializableExtra("laptop");
+                        listaLaptopuri.add(laptop);
+                        tv.setText("Laptopuri: " + listaLaptopuri.size());
+                    }
+                }
+        );
+        btn2.setOnClickListener(v->{
+            Intent intent = new Intent(this, AdaugaLaptop_Form.class);
+            launcher.launch(intent);
+        });
+
     }
 
     //C1
