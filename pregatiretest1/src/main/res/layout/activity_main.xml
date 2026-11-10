@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tv_activ3"
+    android:id="@+id/tv_afisare_lista_laptopuri"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="329dp"
         android:ems="10"
-        android:hint="Numar1"
+        android:hint="@string/numar1"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.194"
@@ -72,13 +72,12 @@
         android:id="@+id/btn_aduna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="40dp"
         android:text="Aduna"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_adaugalaptop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_nr2"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintVertical_bias="0.218" />
 
     <TextView
         android:id="@+id/tv_rezultat"
@@ -94,14 +93,12 @@
         android:id="@+id/btn_adaugalaptop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginBottom="60dp"
         android:text="Adauga laptop"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_vezi_lista_laptopuri"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_aduna"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_afisare_nrlaptop"
@@ -111,7 +108,20 @@
         android:text="Nr laptopuri: 0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn_adaugalaptop"
-        app:layout_constraintTop_toBottomOf="@+id/btn_aduna" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_aduna"
+        app:layout_constraintVertical_bias="0.21" />
+
+    <Button
+        android:id="@+id/btn_vezi_lista_laptopuri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="Vezi lista"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

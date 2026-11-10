@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.tv_activ3), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.tv_afisare_lista_laptopuri), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -88,9 +87,19 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
+
         btn2.setOnClickListener(v->{
             Intent intent = new Intent(this, AdaugaLaptop_Form.class);
             launcher.launch(intent);
+        });
+
+        Button btn3=findViewById(R.id.btn_vezi_lista_laptopuri);
+        btn3.setOnClickListener(v->{
+            Intent inte=new Intent(this, Afisare_Lista_Laptopuri.class);
+            inte.putExtra("lista", listaLaptopuri);
+            startActivity(inte);
+
         });
 
     }

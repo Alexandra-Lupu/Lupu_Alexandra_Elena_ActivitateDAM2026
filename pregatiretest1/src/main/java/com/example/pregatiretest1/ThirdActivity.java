@@ -25,7 +25,7 @@ public class ThirdActivity extends AppCompatActivity {
         int nr2 = bundle.getInt("nr2");
         Toast.makeText(this, mesaj + " " + nr1 + " " + nr2, Toast.LENGTH_LONG).show();
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.tv_activ3), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.tv_afisare_lista_laptopuri), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
