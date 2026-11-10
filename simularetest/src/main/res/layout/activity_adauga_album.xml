@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AdaugaAlbumActivity">
+
+    <TextView
+        android:id="@+id/tv_titlu_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Titlu album" />
+
+    <EditText
+        android:id="@+id/et_titlu_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nume album.."
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tv_an_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="An aparitie album" />
+
+    <EditText
+        android:id="@+id/et_an_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="An album.."
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tv_pret_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pret album" />
+
+    <EditText
+        android:id="@+id/et_pret_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Pret.."
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tv_gen_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gen album" />
+
+    <Spinner
+        android:id="@+id/sp_gen_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/genuri" />
+
+    <TextView
+        android:id="@+id/tv_vinil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vinil" />
+
+    <Switch
+        android:id="@+id/sw_vinil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nu/Da" />
+
+    <TextView
+        android:id="@+id/tv_rating_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rating" />
+
+    <RatingBar
+        android:id="@+id/rb_rating_album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5" />
+
+    <Button
+        android:id="@+id/btn_salveaza_inf_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salveaza" />
+</LinearLayout>

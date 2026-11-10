@@ -38,6 +38,10 @@
             android:name=".Afisare_Lista_Laptopuri"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".AdaugaAlbumActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

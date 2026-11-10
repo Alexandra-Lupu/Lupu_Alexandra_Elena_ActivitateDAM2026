@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Simulare test</string>
+    <string-array name="genuri">
+        <item>Pop</item>
+        <item>Rock</item>
+        <item>Folk</item>
+    </string-array>
+
+</resources>
