@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InformatiiTelefon">
+
+    <TextView
+        android:id="@+id/tv_model_telefon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Model" />
+
+    <EditText
+        android:id="@+id/et_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Model"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tv_rami"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memorie RAM" />
+
+    <Spinner
+        android:id="@+id/sp_rami"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/rami" />
+
+    <TextView
+        android:id="@+id/tv_memorie_interna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memorie interna" />
+
+    <RadioGroup
+        android:id="@+id/rg_memorie_interna"
+        android:layout_width="match_parent"
+        android:layout_height="111dp">
+
+        <RadioButton
+            android:id="@+id/rb_mem1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="126" />
+
+        <RadioButton
+            android:id="@+id/rb_mem2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="228" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_amprenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are senzor de amprenta?" />
+
+    <CheckBox
+        android:id="@+id/cb_amprenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Da" />
+
+    <Button
+        android:id="@+id/btn_salvare_telefon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvare" />
+
+</LinearLayout>
