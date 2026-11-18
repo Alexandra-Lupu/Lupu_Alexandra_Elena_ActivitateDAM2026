@@ -1,6 +1,6 @@
 package com.example.simularetest2;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -32,6 +32,7 @@ public class ListaTelefoane extends AppCompatActivity {
         ArrayList<Telefon> lista=(ArrayList<Telefon>)getIntent().getSerializableExtra("lista");
         ArrayAdapter<Telefon> adapter=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,lista);
         lv.setAdapter(adapter); //lista apare pe ecran
+
 
         lv.setOnItemClickListener((parent,view,position,id)->{
             Telefon select=lista.get(position);

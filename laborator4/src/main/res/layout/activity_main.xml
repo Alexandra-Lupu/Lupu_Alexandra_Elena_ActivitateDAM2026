@@ -52,4 +52,10 @@
         android:layout_height="wrap_content"
         android:text="Afisare lista" />
 
+    <Button
+        android:id="@+id/id_buton_lista_poze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista Imagini" />
+
 </LinearLayout>

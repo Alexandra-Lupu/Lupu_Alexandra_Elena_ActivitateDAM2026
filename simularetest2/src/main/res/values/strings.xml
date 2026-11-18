@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">simularetest2</string>
+    <string name="adauga_telefon">Adauga telefon</string>
+    <string name="afiseaza_lista">Afiseaza lista</string>
+    <string name="model">Model</string>
+    <string name="modell">Model</string>
+    <string name="memorie_ram">Memorie RAM</string>
+    <string name="memorie_interna">Memorie interna</string>
+    <string name="_126">126</string>
+    <string name="_228">228</string>
+    <string name="are_senzor_de_amprenta">Are senzor de amprenta?</string>
+    <string name="da">Da</string>
+    <string name="salvare">Salvare</string>
+    <string name="ana_are_mere">ana are mere</string>
     <string-array name="rami">
         <item>8</item>
         <item>12</item>

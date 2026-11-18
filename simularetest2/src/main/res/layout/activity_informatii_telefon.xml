@@ -12,21 +12,21 @@
         android:id="@+id/tv_model_telefon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Model" />
+        android:text="@string/model" />
 
     <EditText
         android:id="@+id/et_model"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Model"
+        android:hint="@string/modell"
         android:inputType="text" />
 
     <TextView
         android:id="@+id/tv_rami"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Memorie RAM" />
+        android:text="@string/memorie_ram" />
 
     <Spinner
         android:id="@+id/sp_rami"
@@ -38,7 +38,7 @@
         android:id="@+id/tv_memorie_interna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Memorie interna" />
+        android:text="@string/memorie_interna" />
 
     <RadioGroup
         android:id="@+id/rg_memorie_interna"
@@ -49,31 +49,31 @@
             android:id="@+id/rb_mem1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="126" />
+            android:text="@string/_126" />
 
         <RadioButton
             android:id="@+id/rb_mem2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="228" />
+            android:text="@string/_228" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/tv_amprenta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Are senzor de amprenta?" />
+        android:text="@string/are_senzor_de_amprenta" />
 
     <CheckBox
         android:id="@+id/cb_amprenta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Da" />
+        android:text="@string/da" />
 
     <Button
         android:id="@+id/btn_salvare_telefon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Salvare" />
+        android:text="@string/salvare" />
 
 </LinearLayout>

@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 result->{
                     if(result.getResultCode()==RESULT_OK)
                     {
-                        Telefon tel= (Telefon)result.getData().getSerializableExtra("obiect");
+                        Bundle b=result.getData().getExtras();
+                        Telefon tel= (Telefon)b.getSerializable("obiect");
                         lista.add(tel);
                     }
                 });
@@ -54,5 +55,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(inte);
         });
 
+
+       
     }
 }

@@ -71,6 +71,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button btn=findViewById(R.id.id_buton_lista_poze);
+        btn.setOnClickListener(v->{
+            Intent intee=new Intent(this,ListaImagini.class);
+            startActivity(intee);
+                }
+        );
+
     }
 
     //Android primeste obiectul trimis prin bundle din a doua activitate si il pune in lista
@@ -90,8 +98,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-
-
     public void extrage_informatii(View view) {
         EditText et=findViewById(R.id.nume_ET);
         CheckBox cb=findViewById(R.id.eStudent_CB);
@@ -99,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         String nume=et.getText().toString();
         Boolean eStudent=cb.isChecked();
     }
+
 
 
 }
